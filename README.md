@@ -24,10 +24,11 @@ vim ~/.vim/c-support/templates/Templates
 
 把相应的USER MACROS 改为自己的信息即可。
 
-4) 生成tags: 
+4) table键补全需要生成tags: 
+
 cd /usr/include 
 ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
 另外需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 
-更详细的使用参阅vimrc
+更详细的用法参阅vimrc
