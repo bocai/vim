@@ -27,7 +27,7 @@ vim ~/.vim/c-support/templates/Templates
 4) table键补全需要生成tags: 
 
 cd /usr/include 
-ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
 另外需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 
