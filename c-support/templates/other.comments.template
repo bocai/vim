@@ -1,0 +1,23 @@
+== comment.file-description == start ==
+#
+# =========================================================
+#       Filename:  |FILENAME|
+#
+#    Description:  <CURSOR>
+#        Version:  1.0
+#        Created:  |DATE| |TIME|
+#         Author:  |AUTHOR| , |EMAIL|
+# =========================================================
+
+$%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+== comment.file-description-header == start ==
+# coding = utf-8
+# =========================================================
+#       Filename:  |FILENAME|
+#
+#    Description:  <CURSOR>
+#        Version:  1.0
+#        Created:  |DATE| |TIME|
+#         Author:  |AUTHOR| , |EMAIL|
+# =========================================================
+#

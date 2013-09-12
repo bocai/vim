@@ -1,0 +1,34 @@
+$
+$ =============================================================
+$ ========== USER MACROS ======================================
+$ =============================================================
+$  修改相应的宏
+|AUTHOR|    = Bocai 
+|AUTHORREF| = 
+|EMAIL|     =  bocaihuang2008@126.com
+|COMPANY|   =  XIYOU
+|COPYRIGHT| = Copyright (c) |YEAR|, |AUTHOR|
+|STYLE|     = default 
+$
+$ =============================================================
+$ ========== FILE INCLUDES ====================================
+$ =============================================================
+$
+|includefile| = other.comments.template
+==  IF |STYLE| IS C ==
+|includefile| = c.comments.template
+|includefile| = c.cpp.template
+|includefile| = c.idioms.template
+|includefile| = c.preprocessor.template
+|includefile| = c.statements.template
+== ENDIF ==
+$
+== IF |STYLE| IS CPP ==
+|includefile| = cpp.comments.template
+|includefile| = cpp.cpp.template
+|includefile| = cpp.idioms.template
+|includefile| = cpp.preprocessor.template
+|includefile| = cpp.statements.template
+== ENDIF ==
+$
+
