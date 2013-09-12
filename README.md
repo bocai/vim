@@ -1,6 +1,7 @@
 《5分钟把你vim打造成一个集成开发环境》
 
-集合了插件 CVIM taglist nerdtree pydiction  vim-powerline snipMate  omnicppcomplete
+集合了插件 CVIM taglist nerdtree pydiction  vim-powerline snipMate  omnicppcomplete 
+
 还需安装的软件:exuberant-ctags(即ctags) , astyle, cscope
 
 安装方法:
