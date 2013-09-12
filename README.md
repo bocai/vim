@@ -1,5 +1,5 @@
 集合了插件 CVIM nerdtree pydiction  vim-powerline snipMate  omnicppcomplete
-还要安装的软件:exuberant-ctags(即ctags) , taglist , astyle 
+还要安装的软件:exuberant-ctags(即ctags) , taglist , astyle cscope
 
 安装方法:
 
