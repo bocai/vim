@@ -1,5 +1,6 @@
-集合了插件 CVIM nerdtree pydiction  vim-powerline snipMate  omnicppcomplete
-还要安装的软件:exuberant-ctags(即ctags) , taglist , astyle cscope
+《5分钟把你vim打造成一个集成开发环境》
+集合了插件 CVIM taglist nerdtree pydiction  vim-powerline snipMate  omnicppcomplete
+还需安装的软件:exuberant-ctags(即ctags) , astyle, cscope
 
 安装方法:
 
@@ -14,7 +15,9 @@ mv vim ~./.vim
 3) 修改(cvim)自动生成代码的模板
 vim ~/.vim/c-support/templates/Templates
 把相应的USER MACROS 改为自己的信息即可。
+4) 生成tags: 
+cd /usr/include 
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
---------------------------------------------------
 另外需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 更详细的使用参阅vimrc
