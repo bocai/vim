@@ -1,5 +1,5 @@
 ">>  增加缩进,"n>>"表示增加以下n行的缩进
-"<<  减少缩进,"x<<"表示减少以下n行的缩进 
+"<<  减少缩进,"n<<"表示减少以下n行的缩进 
 runtime! debian.vim
 
 " Source a global configuration file if available
