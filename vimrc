@@ -23,7 +23,7 @@ set autowrite		" Automatically save before commands like :next and :make
 setlocal noswapfile
 set hidden             " Hide buffers when they are abandoned
 set number               " 显示行号
-"colorscheme elflord   " 着色模式/usr/share/vim/vim73/colors
+"colorscheme elflord   " 着色模式参看/usr/share/vim/vim73/colors
 colorscheme ron     " 设置配色方案
 set guifont=Monaco:h10   " 字体 && 字号
 set nocp 		 " 使用不兼容 vi 的模式（vi模式一些操作很不方便）
@@ -54,14 +54,14 @@ set nowrapscan               " 搜索到文件两端时不重新搜索
 set clipboard+=unnamed    "共享粘贴版
 set wildmenu  " 增强模式中的命令行自动完成操作
 
-""低版本，实现使用鼠标复制粘贴
-""if has('mouse')
-""	set mouse=
-""endif
+"低版本，实现使用鼠标复制粘贴
+"if has('mouse')
+"	set mouse=
+"endif
 
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 "折叠快捷键:normal模式下常用命令
-"za --> 打开/关闭当前折叠
+"za --> 打开/关闭当前折叠切换
 "zo --> 打开当前折叠
 "zc --> 关闭当前折叠
 set foldmethod=syntax  	" 设置语法折叠
@@ -147,15 +147,15 @@ let g:Powerline_symbols = 'fancy'  "显示不正常则换unicode
 "set guifont=PowerlineSymbols\ for\ Powerline
 ""highlight VertSplit ctermbg=234 ctermfg=234
 
-" Tempalte file 模板文件类型
+" Tempalte file 模板文件类型匹配
 let g:C_Styles = { '*.c,*.h' : 'C', '*.cc,*.cpp,*.hh' : 'CPP', '*.txt,*.py,*.pl': 'default', }
 
-"时间格式, man strftime 查看其格式项
+"时间格式, man strftime 查看其格式项修改为自己喜欢的
 let g:C_FormatDate  = '%F'
 let g:C_FormatTime  = '%H:%M:%S'
 "let g:C_FormatYear= 'year %Y'
 
-" 括号智能匹配
+" 括号智能匹配,有一个缺陷是用鼠标粘贴代码时也会自动添加括号右部。解决：可以先按F4键，粘贴完后再按F4
 :inoremap ( ()<ESC>i
 :inoremap ) <c-r>=ClosePair(')')<CR>
 :inoremap { {}<ESC>i
@@ -237,7 +237,7 @@ func! CompileCode()
         endif
 endfunc
 
-" 运行可执行文件
+" 运行可执行文件的函数
 func! RunCode()
         exec "w"
         if &filetype == "c" || &filetype == "cpp" || &filetype == "haskell"
@@ -292,7 +292,7 @@ if has("cscope")
              nmap <C-/>d :cs find d <C-R>=expand("<cword>")<CR><CR>
          endif
 
-" 按下F2使用vim自带的补全功能(原tab键也可以)
+" 按下F2使用vim自带的补全功能(原tab键更方便)
 imap <F2> <C-n>
 
 "-- omnicppcomplete setting --
@@ -328,7 +328,8 @@ set pastetoggle=<F4> "F4转到插入+粘贴模式，这样粘贴代码段不会�
 " 按下F5重新生成tag文件，并更新taglist
 map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
 imap <F5> <ESC>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR> :TlistUpdate<CR>
-set tags=tags
+set tags=tags;  " 这里的;不能少，否则在阅读源码跳转时找不到tags
+set autochdir 
 set tags+=./tags
 set tags+=/usr/include/tags
 set tags+=/usr/include/c++/tags
@@ -336,7 +337,7 @@ set tags+=/usr/include/c++/stltags
 set tags+=/usr/include/qt4/tags
 set tags+=/usr/include/gtk-2.0/tags
 set tags+=/usr/include/gtk-3.0/tags
-
+set tags+=/usr/src/tags
 " -- QuickFix setting --
 " 按下F6，执行make(命令)编译程序，并打开quickfix窗口，显示编译信息
 map <F6> :make<CR><CR><CR> :copen<CR><CR>
@@ -386,7 +387,7 @@ func FormartSrc()
 		exec "e! %"
 	endif
 endfunc "结束定义FormartSrc
-" fm 格式化代码
+" normal模式下按下fm 格式化代码
 map fm <Esc>:call FormartSrc() <CR>i
 imap fm <Esc>:call FormartSrc() <CR>i
 vmap fm <Esc>:call FormartSrc() <CR>i
@@ -428,4 +429,3 @@ autocmd InsertLeave * call Fcitx2en()
 "进入插入模式
 autocmd InsertEnter * call Fcitx2zh()
 "##### auto fcitx end ######
-
