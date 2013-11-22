@@ -20,6 +20,7 @@ cp vimrc ~/.vimrc
 
 2) 把整个目录转移到家目录下，并改名为隐藏目录
 
+cd ..
 mv vim ~./.vim
 
 3) 修改(cvim)自动生成代码的模板
@@ -36,5 +37,6 @@ sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 另外需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 
 更详细的用法(快捷键等)参阅vimrc
+
 好了，现在可以测试一把了
 新建一个源文件,输入date然后按table键，输入for然后按table键......是不是高端霸气上档次呢。。
