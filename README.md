@@ -8,9 +8,12 @@
 安装方法:
 
 1) git clone git@github.com:bocai/vim.git 
+
 或者 git clone https://github.com/bocai/vim
+
 然后
- cd vim
+cd vim
+
 把当前目录下的 vimrc 拷贝到用户家目录下，并改为隐藏文文件
 
 cp vimrc ~/.vimrc
@@ -25,7 +28,7 @@ vim ~/.vim/c-support/templates/Templates
 
 把相应的USER MACROS 改为自己的信息即可。
 
-4) table键补全需要生成tags,其他的工程要生成tags方法类似: 
+4) table键补全需要生成tags(其他的工程要生成tags方法类似): 
 
 cd /usr/include 
 sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
