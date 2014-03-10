@@ -142,7 +142,7 @@ let Powerline_symbols = 'compatible' "兼容模式，避免乱码
 ""let g:Powerline_mode_cs="S·BLOCK"
 
 set t_Co=256
-let g:Powerline_symbols = 'fancy'  "显示不正常则换unicode 
+let g:Powerline_symbols = 'unicode' "'fancy'  显示不正常则换unicode 
 "set guifont=Consolas\ for\ Powerline\ FixedD:h10
 "set guifont=PowerlineSymbols\ for\ Powerline
 ""highlight VertSplit ctermbg=234 ctermfg=234
@@ -354,7 +354,7 @@ imap <F8> <ESC>:cn<CR>
 imap <F9> <ESC>:make clean<CR>
 
 "定义源代码格式化(需要安装astyle)
-func FormartSrc()
+func! FormartSrc()
 	exec "w"
 		"C程序,Perl程序,Python程序
 	if &filetype == 'c'
