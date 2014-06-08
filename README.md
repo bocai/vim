@@ -35,12 +35,12 @@ vim ~/.vim/c-support/templates/Templates
 
 cd /usr/include 
 
-sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
+sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q  .
 
 另外如果需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 
-更详细的用法(快捷键等)参阅vimrc
+
 
 好了，现在可以测试一把了
 
-新建一个源文件,输入date然后按table键，输入for然后按table键......是不是高端霸气上档次呢。。
+新建一个源文件,输入date然后按table键，输入for然后按table键......是不是高端霸气上档次呢。。更详细的用法(快捷键等)参阅vimrc，也可自行定制。
