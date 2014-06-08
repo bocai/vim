@@ -1,6 +1,6 @@
 《5分钟把你vim打造成一个集成开发环境》
 
-集合了插件 CVIM、 taglist、 nerdtree、 pydiction、  vim-powerline、 snipMate、  omnicppcomplete...
+这里已集合了插件 CVIM、 taglist、 nerdtree、 pydiction、  vim-powerline、 snipMate、  omnicppcomplete...
 这些插件的功能找度娘或者谷哥，我就不多说了。。
 
 还需在终端下安装的软件:exuberant-ctags(即ctags) , astyle, cscope
@@ -23,7 +23,7 @@ cp vimrc ~/.vimrc
 
 cd ..
 
-mv vim ~./.vim
+mv vim ~/.vim
 
 3) 修改(cvim)自动生成代码的模板
 
@@ -37,7 +37,7 @@ cd /usr/include
 
 sudo ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
 
-另外需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
+另外如果需要c++ STL 补全的请把stltags 拷贝到 /usr/include/c++/
 
 更详细的用法(快捷键等)参阅vimrc
 
